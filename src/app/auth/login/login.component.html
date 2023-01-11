@@ -39,9 +39,18 @@
                 <button 
                 [disabled]="loginForm.invalid"
                 class="btn btn-primary submit-btn btn-block" 
+                *ngIf="!loading"
                 type="submit">
                 Login
               </button>
+              <button 
+              [disabled]="true"
+              class="btn btn-primary submit-btn btn-block" 
+              *ngIf="loading"
+              type="button">
+              <i class="fa fa-spin fa-sync"></i>
+              Espere...
+            </button>
               </div>
           
               <div class="text-block text-center my-3">

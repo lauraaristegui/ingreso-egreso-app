@@ -57,7 +57,17 @@
                 [disabled]="registroForm.invalid"
                 type="submit"
                 class="btn btn-primary submit-btn btn-block"
+                *ngIf="!loadingRegister"
                 >Crear cuenta</button>
+
+                <button 
+                [disabled]="true"
+                class="btn btn-primary submit-btn btn-block" 
+                *ngIf="loadingRegister"
+                type="button">
+                <i class="fa fa-spin fa-sync"></i>
+                Espere...
+              </button>
               </div>
               <div class="text-block text-center my-3">
                 <span class="text-small font-weight-semibold">ya tienes una cuenta?</span>
@@ -69,7 +79,6 @@
         </div>
       </div>
     </div>
-    <!-- content-wrapper ends -->
   </div>
-  <!-- page-body-wrapper ends -->
+
 
